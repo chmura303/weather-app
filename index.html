@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="./favicon-16x16.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./fetch-wrapper.js" defer></script>
+    <script type="module" src="./forecast.js" defer></script>
+    <script type="module" src="./app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Weather App</h1>
+    </header>
+
+    <main>
+      <form action="" id="app-form">
+        <label for="city">Enter a city</label>
+        <input name="city" type="text" id="app-input" />
+      </form>
+
+      <div>
+        <h2 id="city-name"></h2>
+        <div id="city-condition"></div>
+        <div>
+          <span id="city-temperature"></span>
+          <span></span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
