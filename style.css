@@ -1,7 +1,129 @@
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+}
+
 body {
-  background-color: #fff5d7;
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Custom CSS */
+
+body {
+  color: #fff;
+  font-family: 'Sora', sans-serif;
+
+  background-color: #5e94c3;
+  opacity: 1;
+  background-image: radial-gradient(
+    #ffffff 0.6000000000000001px,
+    #5e94c3 0.6000000000000001px
+  );
+  background-size: 12px 12px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  max-width: 360px;
+  min-height: 500px;
+  margin: 20vh auto;
+  /* border: 1px solid red; */
+  text-align: center;
+  padding: 1em;
+  border-radius: 4px;
+  background: #5e94c3;
+  /* backdrop-filter: blur(1px); */
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 #app-input {
-  background-color: #f7c331;
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px #fff;
+  max-width: 200px;
+  min-height: 28px;
+  opacity: 0.9;
+}
+
+#main-btn {
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 6px;
+  opacity: 0.9;
+  transition: 250ms;
+}
+
+#main-btn::focus {
+  background: #000;
+  color: #fff;
+}
+#main-btn:hover {
+  opacity: 1;
+}
+
+.city:not(:first-of-type) {
+  padding-block: 0.4rem;
+}
+
+.city.name {
+  font-size: 1.5rem;
+  padding-block: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.city.temperature {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.result {
+  padding: 1em 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1em;
+  width: 100%;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.footer-wrapper {
+  padding-top: 0.75em;
+}
+
+.footer hr {
+  max-width: 90vw;
+  margin-inline: auto;
+  color: #fff;
 }

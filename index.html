@@ -4,32 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="shortcut icon" href="./favicon-16x16.png" type="image/x-icon" />
+    <title>Weather App</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/site.webmanifest" />
+
+    <!-- JavaScript -->
     <script type="module" src="./fetch-wrapper.js" defer></script>
     <script type="module" src="./forecast.js" defer></script>
     <script type="module" src="./app.js" defer></script>
   </head>
+
   <body>
-    <header>
-      <h1>Weather App</h1>
-    </header>
+    <main class="main">
+      <div class="container">
+        <form action="" id="app-form">
+          <input
+            name="city"
+            type="text"
+            id="app-input"
+            placeholder="Enter a city"
+            required
+            autofocus
+          />
+          <button type="submit" id="main-btn">Search</button>
+        </form>
 
-    <main>
-      <form action="" id="app-form">
-        <label for="city">Enter a city</label>
-        <input name="city" type="text" id="app-input" />
-      </form>
-
-      <div>
-        <h2 id="city-name"></h2>
-        <div id="city-condition"></div>
-        <div>
-          <span id="city-temperature"></span>
-          <span></span>
+        <div class="result">
+          <div class="city name"></div>
+          <div class="city condition"></div>
+          <div class="city temperature"></div>
         </div>
       </div>
     </main>
+
+    <footer class="footer">
+      <hr />
+      <div class="footer-wrapper">
+        Copyright &copy; 2023 chmura303 |
+        <a target="_blank" href="https://icons8.com/icon/qA3w9Yp2vY7r/weather"
+          >Weather</a
+        >
+        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </div>
+    </footer>
   </body>
 </html>

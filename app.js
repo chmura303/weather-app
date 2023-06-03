@@ -3,9 +3,9 @@ import { getCity, getWeather } from './forecast.js';
 const form = document.querySelector('#app-form');
 const input = document.querySelector('#app-input');
 
-const cityName = document.querySelector('#city-name');
-const condition = document.querySelector('#city-condition');
-const temperature = document.querySelector('#city-temperature');
+const cityName = document.querySelector('.city.name');
+const condition = document.querySelector('.city.condition');
+const temperature = document.querySelector('.city.temperature');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
