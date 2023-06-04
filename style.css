@@ -55,7 +55,7 @@ a {
 .container {
   max-width: 360px;
   min-height: 500px;
-  margin: 20vh auto;
+  margin: 25vh auto;
   text-align: center;
   padding: 4em 0;
   border-radius: 4px;
@@ -96,6 +96,10 @@ a {
   border: 1px solid #fff;
 }
 
+.result {
+  padding: 1em 0;
+}
+
 .city:not(:first-of-type) {
   padding-block: 0.4rem;
 }
@@ -112,8 +116,8 @@ a {
   font-weight: 700;
 }
 
-.result {
-  padding: 1em 0;
+.city.icon img {
+  margin: auto;
 }
 
 .footer {
