@@ -1,7 +1,7 @@
 import FetchWrapper from './fetch-wrapper.js';
 
 const API = new FetchWrapper(
-  location.protocol
+  location.protocol === 'http:'
     ? 'http://dataservice.accuweather.com'
     : 'https://dataservice.accuweather.com'
 );
