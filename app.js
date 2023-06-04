@@ -7,6 +7,7 @@ const cityName = document.querySelector('.city.name');
 const condition = document.querySelector('.city.condition');
 const temperature = document.querySelector('.city.temperature');
 const icon = document.querySelector('.city.icon');
+const result = document.querySelector('.result');
 const image = document.querySelector('.image-wrapper');
 
 form.addEventListener('submit', e => {
@@ -19,7 +20,9 @@ form.addEventListener('submit', e => {
     .then(data => {
       console.log(data);
 
-      image.innerHTML = '';
+      result.style.display = 'block';
+
+      image.style.display = 'none';
 
       condition.textContent = data.WeatherText;
 

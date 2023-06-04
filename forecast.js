@@ -5,7 +5,7 @@ const API = new FetchWrapper(
     ? 'http://dataservice.accuweather.com'
     : 'https://dataservice.accuweather.com'
 );
-const key = '0V8CaSTtz4eUc0s0HGz6tDyjx4er32nz';
+const key = 'Eq8ZQd4SUco3KnePgk46fuq2hFM9v4Q7';
 
 export const getCity = city => {
   return new Promise((res, rej) => {
