@@ -7,6 +7,7 @@ const cityName = document.querySelector('.city.name');
 const condition = document.querySelector('.city.condition');
 const temperature = document.querySelector('.city.temperature');
 const icon = document.querySelector('.city.icon');
+const image = document.querySelector('.image-wrapper');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
@@ -16,11 +17,13 @@ form.addEventListener('submit', e => {
   getCity(city)
     .then(data => getWeather(data.Key))
     .then(data => {
-      console.log(data.WeatherIcon);
+      console.log(data);
+
+      image.innerHTML = '';
 
       condition.textContent = data.WeatherText;
 
-      temperature.textContent = `${data.Temperature.Metric.Value}ºC`;
+      temperature.innerHTML = `${data.Temperature.Metric.Value}<span class='celsius'>ºC</span>`;
 
       const num = data.WeatherIcon;
       const path = '<img src="./img/weather/icons8-';
