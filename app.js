@@ -16,7 +16,10 @@ form.addEventListener('submit', e => {
   let city = input.value.trim();
 
   getCity(city)
-    .then(data => getWeather(data.Key))
+    .then(data => {
+      cityName.textContent = data.EnglishName;
+      return getWeather(data.Key);
+    })
     .then(data => {
       console.log(data);
 
@@ -77,8 +80,5 @@ form.addEventListener('submit', e => {
     })
     .catch(err => console.log(err));
 
-  city = `${city[0].toUpperCase()}${city.substring(1).toLowerCase()}`;
-
-  cityName.textContent = city;
   form.reset();
 });
